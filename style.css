@@ -1,0 +1,390 @@
+/*Estilos Globais*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #80808029;
+    font-family: '', sans-serif;
+    color: #3d3d3db6;
+}
+
+input::placeholder {
+    color: #3d3d3db6;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    padding-left: 10px;
+    color: #3d3d3db6;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: #f0f0f0; 
+}
+
+select {
+    padding-left: 10px;
+    color: #3d3d3db6;
+}
+/* Estilos do Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+}
+
+.limita-largura {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.conteudo-topo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.conteudo-topo img {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+}
+
+.conteudo-topo h1 {
+    font-size: 24px;
+    color: #3e3eb8;
+}
+
+.banner-formulario {
+    width: 100%;
+    height: auto;
+    background: url('assets/imagens/bahia.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* Estilos do Conteúdo do Formulário */
+.conteudo-formulario {
+    padding: 50px 0;
+}
+
+.topo-formulario {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5d15d1;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.topo-formulario img {
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+    transform: rotate(-45deg);
+}
+
+@keyframes moveAviao {
+    50% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-50px) rotate(-45deg); /* Ajuste a distância desejada e o ângulo */
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.topo-formulario img {
+    animation: moveAviao 3s ease-in-out infinite; /* Ajuste a duração conforme necessário */
+}
+
+
+.formulario {
+    width: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 20px;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+
+label {
+    font-size: 16px;
+}
+
+.dados input,
+.dados select {
+    width: 100%;
+    height: 32px;
+    margin: 10px 0;
+}
+
+.campos-alinhados {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    vertical-align: middle;
+}
+
+.campos-alinhados div {
+    width: calc(50% - 10px);
+}
+
+.infantil {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.infantil div {
+    display: flex;
+    align-items: center;
+    width: 120px;
+}
+
+.infantil input,
+.grupos input {
+    margin: 10px 10px;
+}
+
+.grupos {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.grupos div {
+    display: flex;
+    align-items: center;
+    width: 120px;
+}
+
+.botao {
+    background-color: #3e3eb8;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #5d15d1;
+}
+
+.ofertas .anuncios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 32px auto 0;
+}
+
+.titulo-info h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.titulo-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.imagens {
+    width: 100%;
+    height: 375px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagem-principal {
+    position: relative;
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.imagens-menores {
+    width: calc(50% - 10px);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imagens-menores figure {
+    position: relative;
+    width: calc(50% - 10px);
+    height: calc(50% - 10px);
+}
+
+.imagem-principal img,
+.imagens-menores img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-principal figcaption,
+.imagens-menores figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 17px;
+    background-color: rgb(0, 0, 0, 50%);
+    padding: 5px 10px;
+}
+
+.imagens-anuncios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagens-anuncios figure {
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.imagens-anuncios figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagens-anuncios div {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.titulo-anuncio h4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.titulo-anuncio p {
+    font-size: 14px;
+    color: grey;
+    margin-top: 15px;
+}
+
+/* Estilos do Rodapé */
+.rodape {
+    width: 100%;
+    margin-top: 32px;
+    background-color: #5d15d1;
+}
+
+.contatos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contato {
+    margin: 15px 0;
+    color: #fff;
+    text-align: left;
+}
+
+.contato h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.contato div {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.contato div img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.contato div a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:1100px) {
+    .limita-largura {
+        width: 90%;
+    }
+}
+
+@media (max-width:768px) {
+    .botao, .imagens-menores {
+        width: 100%;
+    }
+
+    .imagens {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .imagem-principal, .imagens-menores figure {
+        width: 100%;
+        height: 225px;
+        margin-top: 15px 0 0 0;
+    }
+
+    .imagens-anuncios { 
+        flex-direction: column;
+    }
+
+    .imagens-anuncios figure {
+        width: 100%;
+        margin-top: 15px 0 0 0;
+    }
+
+    .contatos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato {
+        width: 250px;
+    }
+}
+
+@media (max-width:540px) {
+    .dados, .infantil, .grupos {
+        flex-direction: column;
+    }
+
+    .dados div, .infantil div, .grupos div {
+        width: 100%;
+    }
+}
